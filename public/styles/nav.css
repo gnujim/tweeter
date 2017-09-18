@@ -12,10 +12,13 @@
   background-color: #00a087;
   color: #e8fdff;
   height: 80px;
-  width: 100%;
+  left: 0;
+  right: 0;
   padding-right: 2em;
   padding-left: 2em;
   position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 #nav-bar .logo {

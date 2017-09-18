@@ -24,6 +24,18 @@ body {
   margin: 0;
 }
 
+.container {
+  background-color: white;
+  margin: 0 auto;
+  position: relative;
+  top: 140px;
+  width: 450px;
+}
+
+.paragraph {
+  width: 400px;
+  height: 500px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
