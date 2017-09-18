@@ -1,0 +1,32 @@
+/* NAVBAR 
+ * fixed to the top
+ * 80 px in height
+ * full width of viewport
+ * #00a087 default bkgrnd colour
+ * #e8fdff default font colour
+ * inner content should not be touching viewport edge on 
+ *  left/right edges, should be spaced out 2em on either side
+ */
+
+#nav-bar {
+  background-color: #00a087;
+  color: #e8fdff;
+  height: 80px;
+  width: 100%;
+  padding-right: 2em;
+  padding-left: 2em;
+  position: fixed;
+}
+
+#nav-bar .logo {
+  height: 80px;
+  float: left;
+  padding-right: 5px;
+}
+
+#nav-bar .header {
+  float: left;
+  padding-left: 5px;
+  line-height: 80px;
+  font-size: 2em;
+}
