@@ -1,0 +1,80 @@
+/* TWEETS
+ * 
+ * 
+ * 
+ *  
+ */
+
+.all-tweets {
+  margin-top: 10px;
+}
+
+.tweet {
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 2%;
+  border: 1px solid rgb(177, 174, 174);
+  position: relative;
+  opacity: 0.7;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet header {
+  background-color: rgb(238, 238, 238);
+  margin: 0 auto;
+  height: 70px;
+}
+
+.tweet header .user-avatar {
+  border-radius: 5%;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 10px;
+}
+
+.tweet header .user-name {
+  color: rgb(36, 71, 81);
+  margin-top: 12px;
+  float: left;
+}
+
+.tweet header .user-handle {
+  color: rgb(174, 174, 174);
+  float: right;
+  font-size: 0.85em;
+  margin: 10px;
+  margin-top: 18px;
+  position: absolute top;
+}
+
+.tweet p {
+  color: rgb(36, 71, 81);
+  margin: 13px;
+  line-height: 50px;
+}
+
+.tweet footer {
+  border-top: 1px solid rgb(174, 174, 174);
+  width: 398px;
+  height: 30px;
+  bottom: 0;
+  position: absolute;
+}
+
+.tweet footer .timestamp {
+  float: left;
+  color: rgb(36, 71, 81);
+  font-size: 0.75em;
+  line-height: 30px;
+  margin-left: 10px;
+}
+
+.tweet footer .fa-flag {
+  float: right;
+}

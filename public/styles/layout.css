@@ -18,14 +18,14 @@ html {
  */
 
 body {
-  color: #244751;
-  background-color: #eee;
+  color: rgb(36, 71, 81);
+  background-color: rgb(238, 238, 238);
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
 }
 
 .container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   top: 80px;
   padding-top: 50px;
   margin: 0 auto;

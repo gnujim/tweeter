@@ -20,6 +20,12 @@
   <!-- New Tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+  <!-- Tweets CSS -->
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+  <!-- Font Awesome Icons CSS -->
+  <link rel="stylesheet" href="../../font-awesome-4.7.0/css/font-awesome.min.css" />
+
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -41,6 +47,8 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+
+    <!-- Compose New Tweet form -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
@@ -49,6 +57,25 @@
         <span class="counter">140</span>
       </form>
     </section>
+
+    <!-- All Tweets -->
+    <section class="all-tweets">
+      <article class="tweet">
+        <header>
+          <a href="#">
+            <img class="user-avatar" src="http://www.novascotia.com/sites/default/files/road-trips/istock_000010563107Large.jpg">
+          </a>
+          <h2 class="user-name">Lighthouse Labs</h2>
+          <a class="user-handle" href="#">@lighthouselabs</a>
+        </header>
+        <p>Little tweet here</p>
+        <footer>
+          <div class="timestamp">10 days ago</div>
+          <i class="fa fa-flag" aria-hidden="true"></i>
+        </footer>
+      </article>
+    </section>
+
   </main>
 
 </body>
