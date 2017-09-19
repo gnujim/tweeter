@@ -6,16 +6,16 @@
  */
 
 .new-tweet {
-  background-color: #eee;
+  background-color: rgb(238, 238, 238);
   width: 400px;
   height: 150px;
   margin: 0 auto;
   border-radius: 2%;
-  border: 1px solid #b1aeae;
+  border: 1px solid rgb(177, 174, 174);
 }
 
 .new-tweet h2 {
-  border-bottom: 2px solid #7e7e7e;
+  border-bottom: 2px solid rgb(126, 126, 126);
   margin: 10px;
 }
 
@@ -38,4 +38,8 @@
   margin-right: 15px;
   font-size: 0.85em;
   font-style: italic;
+}
+
+.negativeCount {
+  color: rgba(255, 0, 0, 0.63);
 }
