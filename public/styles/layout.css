@@ -26,16 +26,14 @@ body {
 
 .container {
   background-color: white;
+  top: 80px;
+  padding-top: 50px;
   margin: 0 auto;
   position: relative;
-  top: 140px;
   width: 450px;
+  height: 1000px;
 }
 
-.paragraph {
-  width: 400px;
-  height: 500px;
-}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
