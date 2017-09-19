@@ -1,6 +1,6 @@
 // CHARACTER COUNTER
 
-$(document).ready(function() {
+$(function() {
   $('textarea').on('input', function() {
     var textAmount = $(this).val().length;
     var remaining = 140 - textAmount;
