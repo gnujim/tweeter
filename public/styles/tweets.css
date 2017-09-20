@@ -5,7 +5,7 @@
  *  
  */
 
-.all-tweets {
+#tweets-container {
   margin-top: 10px;
 }
 
@@ -14,6 +14,7 @@
   width: 400px;
   height: 180px;
   margin: 0 auto;
+  margin-top: 10px;
   border-radius: 2%;
   border: 1px solid rgb(177, 174, 174);
   position: relative;
@@ -56,7 +57,7 @@
 .tweet p {
   color: rgb(36, 71, 81);
   margin: 13px;
-  line-height: 50px;
+  line-height: 30px;
 }
 
 .tweet footer {
@@ -79,6 +80,11 @@
   float: right;
   line-height: 30px;
   margin-right: 8px;
+  visibility: hidden;
+}
+
+.tweet:hover footer .icons {
+  visibility: visible;
 }
 
 .tweet footer .icons a {
