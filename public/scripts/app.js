@@ -4,59 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-var data = [
-  {
-    user: {
-      name: 'Newton',
-      avatars: {
-        small: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png',
-        regular: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png',
-        large: 'https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png'
-      },
-      handle: '@SirIsaac'
-    },
-    content: {
-      text:
-        'If I have seen further it is by standing on the shoulders of giants'
-    },
-    created_at: 1461116232227
-  },
-  {
-    user: {
-      name: 'Descartes',
-      avatars: {
-        small: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png',
-        regular: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png',
-        large: 'https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png'
-      },
-      handle: '@rd'
-    },
-    content: {
-      text: 'Je pense , donc je suis'
-    },
-    created_at: 1461113959088
-  },
-  {
-    user: {
-      name: 'Johann von Goethe',
-      avatars: {
-        small: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png',
-        regular: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png',
-        large: 'https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png'
-      },
-      handle: '@johann49'
-    },
-    content: {
-      text: 'Es ist nichts schrecklicher als eine tätige Unwissenheit.'
-    },
-    created_at: 1461113796368
-  }
-];
-
 function renderTweets(tweets) {
+  $('#tweets-container').empty();
   tweets.forEach(i => {
     var tweet = createTweetElement(i);
-    console.log(tweet);
     $(function() {
       $(tweet).appendTo('#tweets-container');
     });
@@ -75,7 +26,7 @@ function createTweetElement(tweet) {
   </header>
   <p class="tweet-content">${tweet.content.text}</p>
   <footer>
-    <div class="timestamp">${tweet.created_at} days ago</div>
+    <div class="timestamp">${moment(tweet.created_at).fromNow()}</div>
     <div class="icons">
       <a href="#">
         <i class="fa fa-flag" aria-hidden="true"></i>
@@ -91,4 +42,44 @@ function createTweetElement(tweet) {
   </article>`;
 }
 
-renderTweets(data);
+function loadTweets() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    success: function(data) {
+      renderTweets(data);
+    }
+  });
+}
+
+$(function() {
+  var $form = $('.new-tweet form');
+
+  $form.on('submit', function(event) {
+    event.preventDefault();
+    var $text = $('.tweet-text');
+    var tweetText = $text.val();
+    if (tweetText.length === 0) {
+      alert('Empty content.');
+      return;
+    }
+    if (tweetText.length > 140) {
+      alert('Tweet must be under 140 characters.');
+      return;
+    }
+    var content = $(this).serialize();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: content,
+      success: function() {
+        $('.tweet-text')
+          .val('')
+          .empty();
+        $('.counter').text('140');
+        loadTweets();
+      }
+    });
+  });
+  loadTweets();
+});

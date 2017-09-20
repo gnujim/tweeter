@@ -35,6 +35,8 @@
   <!-- Character Counter JS -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
 </head>
 
 <body>
@@ -51,8 +53,8 @@
     <!-- Compose New Tweet form -->
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets/" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
+      <form action="/tweets" method="POST">
+        <textarea class="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
@@ -61,6 +63,7 @@
     <!-- All Tweets -->
     <section id="tweets-container">
       <article class="tweet">
+
         <header>
           <a href="#">
             <img class="user-avatar" src="http://www.novascotia.com/sites/default/files/road-trips/istock_000010563107Large.jpg">
@@ -68,7 +71,9 @@
           <h2 class="user-name">Lighthouse Labs</h2>
           <a class="user-handle" href="#">@lighthouselabs</a>
         </header>
+
         <p class="tweet-content">Little tweet here</p>
+
         <footer>
           <div class="timestamp">10 days ago</div>
           <div class="icons">
@@ -83,6 +88,7 @@
             </a>
           </div>
         </footer>
+
       </article>
     </section>
 
