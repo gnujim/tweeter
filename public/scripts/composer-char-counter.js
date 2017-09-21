@@ -7,9 +7,9 @@ $(function() {
     var counter = $(this).siblings('.counter');
     counter.text(remaining);
     if (remaining < 0) {
-      counter.addClass('negativeCount');
+      counter.addClass('negative-count');
     } else {
-      counter.removeClass('negativeCount');
+      counter.removeClass('negative-count');
     }
   });
 });

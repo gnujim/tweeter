@@ -11,14 +11,14 @@
 
 .tweet {
   background-color: rgb(255, 255, 255);
-  width: 400px;
+  border: 1px solid rgb(177, 174, 174);
+  border-radius: 2%;
   height: 180px;
   margin: 0 auto;
   margin-top: 10px;
-  border-radius: 2%;
-  border: 1px solid rgb(177, 174, 174);
-  position: relative;
   opacity: 0.7;
+  position: relative;
+  width: 400px;
 }
 
 .tweet:hover {
@@ -27,22 +27,22 @@
 
 .tweet header {
   background-color: rgb(238, 238, 238);
-  margin: 0 auto;
   height: 70px;
+  margin: 0 auto;
 }
 
 .tweet header .user-avatar {
   border-radius: 5%;
-  width: 50px;
-  height: 50px;
   float: left;
+  height: 50px;
   margin: 10px;
+  width: 50px;
 }
 
 .tweet header .user-name {
   color: rgb(36, 71, 81);
-  margin-top: 12px;
   float: left;
+  margin-top: 12px;
 }
 
 .tweet header .user-handle {
@@ -56,21 +56,21 @@
 
 .tweet p {
   color: rgb(36, 71, 81);
-  margin: 13px;
   line-height: 30px;
+  margin: 13px;
 }
 
 .tweet footer {
   border-top: 1px solid rgb(174, 174, 174);
-  width: 398px;
-  height: 30px;
   bottom: 0;
+  height: 30px;
   position: absolute;
+  width: 398px;
 }
 
 .tweet footer .timestamp {
-  float: left;
   color: rgb(36, 71, 81);
+  float: left;
   font-size: 0.75em;
   line-height: 30px;
   margin-left: 10px;
@@ -88,7 +88,7 @@
 }
 
 .tweet footer .icons a {
-  text-decoration: none;
   color: rgb(59, 187, 166);
   padding: 2px;
+  text-decoration: none;
 }

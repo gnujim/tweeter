@@ -13,37 +13,37 @@
   color: rgb(232, 253, 255);
   height: 80px;
   left: 0;
-  right: 0;
   padding-right: 2em;
   padding-left: 2em;
   position: fixed;
+  right: 0;
   top: 0;
   z-index: 10;
 }
 
 #nav-bar .logo {
-  height: 80px;
-  width: 80px;
   float: left;
+  height: 80px;
   padding-right: 5px;
+  width: 80px;
 }
 
 #nav-bar .header {
   float: left;
-  padding-left: 5px;
-  line-height: 80px;
   font-size: 2em;
+  line-height: 80px;
+  padding-left: 5px;
 }
 
 #nav-bar input {
-  float: right;
-  height: 60px;
-  width: 100px;
   color: rgb(59, 187, 166);
-  font-size: 18px;
   background-color: rgb(202, 240, 243);
   border-color: rgb(126, 126, 126);
   border-radius: 8%;
+  float: right;
+  font-size: 18px;
+  height: 60px;
+  width: 100px;
 }
 
 #nav-bar input:hover {

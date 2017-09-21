@@ -8,9 +8,8 @@ $(function() {
   function renderTweets(tweets) {
     $('#tweets-container').empty();
     tweets.forEach(i => {
-      var tweet = createTweetElement(i);
       $(function() {
-        $(tweet).prependTo('#tweets-container');
+        $(createTweetElement(i)).prependTo('#tweets-container');
       });
     });
   }
@@ -55,8 +54,7 @@ $(function() {
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
-    var $text = $('.tweet-text');
-    var tweetText = $text.val();
+    var tweetText = $('.tweet-text').val();
     if (tweetText.length === 0) {
       alert('Empty content.');
       return;
@@ -65,11 +63,10 @@ $(function() {
       alert('Tweet must be under 140 characters.');
       return;
     }
-    var content = $(this).serialize();
     $.ajax({
       url: '/tweets',
       method: 'POST',
-      data: content,
+      data: $(this).serialize(),
       success: function() {
         $('.tweet-text').val('');
         loadTweets();
