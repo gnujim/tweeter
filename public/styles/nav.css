@@ -35,18 +35,20 @@
   padding-left: 5px;
 }
 
-#nav-bar input {
+#nav-bar button {
   color: rgb(59, 187, 166);
   background-color: rgb(202, 240, 243);
-  border-color: rgb(126, 126, 126);
-  border-radius: 8%;
+  border: 2px solid rgb(126, 126, 126);
+  border-radius: 7%;
   float: right;
   font-size: 18px;
-  height: 60px;
-  width: 100px;
+  height: 55px;
+  margin: 12px;
+  width: 110px;
 }
 
-#nav-bar input:hover {
+#nav-bar button:hover {
   background-color: rgb(255, 255, 255);
+  border-color: rgb(56, 55, 55);
   color: rgb(0, 0, 0);
 }

@@ -54,10 +54,11 @@
   position: absolute top;
 }
 
-.tweet p {
+.tweet .tweet-content {
   color: rgb(36, 71, 81);
   line-height: 30px;
   margin: 13px;
+  width: 370px;
 }
 
 .tweet footer {

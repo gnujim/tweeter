@@ -1,7 +1,7 @@
 // CHARACTER COUNTER
 
 $(function() {
-  $('textarea').on('input', function() {
+  $('.new-tweet textarea').on('input', function() {
     var textAmount = $(this).val().length;
     var remaining = 140 - textAmount;
     var counter = $(this).siblings('.counter');

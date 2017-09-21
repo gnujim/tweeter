@@ -54,13 +54,15 @@ $(function() {
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
-    var tweetText = $('.tweet-text').val();
+    var tweetText = $('.new-tweet textarea').val();
     if (tweetText.length === 0) {
       alert('Empty content.');
+      //append
       return;
     }
     if (tweetText.length > 140) {
       alert('Tweet must be under 140 characters.');
+      //append
       return;
     }
     $.ajax({
@@ -68,13 +70,14 @@ $(function() {
       method: 'POST',
       data: $(this).serialize(),
       success: function() {
-        $('.tweet-text').val('');
+        $('.new-tweet textarea').val('');
+        $('.counter').text('140');
         loadTweets();
       }
     });
   });
 
-  $('.compose').on('click', function() {
+  $('#nav-bar button').on('click', function() {
     $('.new-tweet').slideToggle(300, function() {
       $('.new-tweet textarea').select();
     });

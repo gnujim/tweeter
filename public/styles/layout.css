@@ -20,7 +20,7 @@ html {
 body {
   background-color: rgb(238, 238, 238);
   color: rgb(36, 71, 81);
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Inconsolata', monospace;
   margin: 0;
 }
 
@@ -28,6 +28,7 @@ body {
   background-color: rgb(255, 255, 255);
   margin: 0 auto;
   overflow: auto;
+  padding-bottom: 50px;
   padding-top: 50px;
   position: relative;
   top: 80px;
