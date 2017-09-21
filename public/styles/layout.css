@@ -18,8 +18,8 @@ html {
  */
 
 body {
-  color: rgb(36, 71, 81);
   background-color: rgb(238, 238, 238);
+  color: rgb(36, 71, 81);
   font-family: 'Roboto Condensed', sans-serif;
   margin: 0;
 }
