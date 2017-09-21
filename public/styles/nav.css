@@ -1,16 +1,6 @@
-/* NAVBAR 
- * fixed to the top
- * 80 px in height
- * full width of viewport
- * #00a087 default bkgrnd colour
- * #e8fdff default font colour
- * inner content should not be touching viewport edge on 
- *  left/right edges, should be spaced out 2em on either side
- */
-
-#nav-bar {
-  background-color: rgb(0, 160, 135);
-  color: rgb(232, 253, 255);
+nav {
+  background-color: #00a087;
+  color: #e8fdff;
   height: 80px;
   left: 0;
   padding-right: 2em;
@@ -18,37 +8,30 @@
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 10;
-}
+  z-index: 10; }
+  nav img {
+    float: left;
+    height: 80px;
+    padding-right: 5px;
+    width: 80px; }
+  nav .header {
+    float: left;
+    font-size: 2em;
+    line-height: 80px;
+    padding-left: 5px; }
+  nav button {
+    color: #3bbba6;
+    background-color: #caf0f3;
+    border: 2px solid #7e7e7e;
+    border-radius: 7%;
+    float: right;
+    font-size: 18px;
+    height: 55px;
+    margin: 12px;
+    width: 110px; }
+  nav button:hover {
+    background-color: white;
+    border-color: #383737;
+    color: black; }
 
-#nav-bar .logo {
-  float: left;
-  height: 80px;
-  padding-right: 5px;
-  width: 80px;
-}
-
-#nav-bar .header {
-  float: left;
-  font-size: 2em;
-  line-height: 80px;
-  padding-left: 5px;
-}
-
-#nav-bar button {
-  color: rgb(59, 187, 166);
-  background-color: rgb(202, 240, 243);
-  border: 2px solid rgb(126, 126, 126);
-  border-radius: 7%;
-  float: right;
-  font-size: 18px;
-  height: 55px;
-  margin: 12px;
-  width: 110px;
-}
-
-#nav-bar button:hover {
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(56, 55, 55);
-  color: rgb(0, 0, 0);
-}
+/*# sourceMappingURL=nav.css.map */

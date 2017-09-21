@@ -1,36 +1,26 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+/* Do not modify these two selectors, please */
 html {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
-/*
- * Global layout stuff
- */
-
+/* Global layout stuff */
 body {
-  background-color: rgb(238, 238, 238);
-  color: rgb(36, 71, 81);
-  font-family: 'Inconsolata', monospace;
-  margin: 0;
-}
+  background-color: #eeeeee;
+  color: #244751;
+  font: 100% Inconsolata, monospace;
+  margin: 0; }
+  body main {
+    background-color: white;
+    margin: 0 auto;
+    overflow: auto;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    top: 80px;
+    width: 450px; }
 
-.container {
-  background-color: rgb(255, 255, 255);
-  margin: 0 auto;
-  overflow: auto;
-  padding-bottom: 50px;
-  padding-top: 50px;
-  position: relative;
-  top: 80px;
-  width: 450px;
-}
+/*# sourceMappingURL=layout.css.map */
