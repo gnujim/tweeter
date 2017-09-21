@@ -5,6 +5,7 @@
  */
 
 $(function() {
+  // renderTweets function that clears tweets-container and adds new tweets
   function renderTweets(tweets) {
     $('#tweets-container').empty();
     tweets.forEach(i => {
@@ -14,6 +15,7 @@ $(function() {
     });
   }
 
+  // createTweetElement function returns HTML string
   function createTweetElement(tweet) {
     return `
           <article class="tweet">
@@ -42,6 +44,8 @@ $(function() {
           </article>`;
   }
 
+  // use ajax to GET /tweets
+  // on success, invoke renderTweets to add new tweet
   function loadTweets() {
     $.ajax({
       url: '/tweets',
@@ -52,6 +56,8 @@ $(function() {
     });
   }
 
+  // when tweet is submitted, issue error msgs if invalid character count
+  // use ajax to POST /tweets data and reset compose box
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
     var tweetText = $('.new-tweet textarea').val();
@@ -77,11 +83,14 @@ $(function() {
     });
   });
 
+  // when compose button is clicked, slide compose box
+  // and auto select textarea
   $('#nav-bar button').on('click', function() {
     $('.new-tweet').slideToggle(300, function() {
       $('.new-tweet textarea').select();
     });
   });
 
+  // invoke to load all tweets
   loadTweets();
 });

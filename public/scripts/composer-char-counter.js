@@ -1,4 +1,4 @@
-// CHARACTER COUNTER
+// CHARACTER COUNTER function
 
 $(function() {
   $('.new-tweet textarea').on('input', function() {
