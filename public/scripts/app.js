@@ -62,13 +62,11 @@ $(function() {
     event.preventDefault();
     var tweetText = $('.new-tweet textarea').val();
     if (tweetText.length === 0) {
-      alert('Empty content.');
-      //append
+      $('.error-msg').text('Cannot submit empty Tweet!');
       return;
     }
     if (tweetText.length > 140) {
-      alert('Tweet must be under 140 characters.');
-      //append
+      $('.error-msg').text('Too many characters!');
       return;
     }
     $.ajax({
@@ -78,6 +76,7 @@ $(function() {
       success: function() {
         $('.new-tweet textarea').val('');
         $('.counter').text('140');
+        $('.error-msg').slideUp();
         loadTweets();
       }
     });
