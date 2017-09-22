@@ -6,6 +6,7 @@ $padding-small: 5px;
 nav {
   background-color: rgb(0, 160, 135);
   color: rgb(232, 253, 255);
+  display: flex;
   height: $size;
   left: $align-value;
   padding-right: $padding-large;
@@ -16,14 +17,13 @@ nav {
   z-index: 10;
 
   img {
-    float: left;
     height: $size;
     padding-right: $padding-small;
     width: $size;
   }
 
   .header {
-    float: left;
+    flex: 1;
     font-size: $padding-large;
     line-height: $size;
     padding-left: $padding-small;
@@ -34,7 +34,6 @@ nav {
     background-color: rgb(202, 240, 243);
     border: 2px solid rgb(126, 126, 126);
     border-radius: 7%;
-    float: right;
     font-size: 18px;
     height: 55px;
     margin: 12px;

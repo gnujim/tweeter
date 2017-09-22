@@ -4,19 +4,19 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(function() {
+$(() => {
   // renderTweets function that clears tweets-container and adds new tweets
-  function renderTweets(tweets) {
+  const renderTweets = tweets => {
     $('#tweets-container').empty();
     tweets.forEach(i => {
-      $(function() {
+      $(() => {
         $(createTweetElement(i)).prependTo('#tweets-container');
       });
     });
-  }
+  };
 
   // createTweetElement function returns HTML string
-  function createTweetElement(tweet) {
+  const createTweetElement = tweet => {
     return `
           <article class="tweet">
           <header>
@@ -42,25 +42,26 @@ $(function() {
             </div>
           </footer>
           </article>`;
-  }
+  };
 
   // use ajax to GET /tweets
   // on success, invoke renderTweets to add new tweet
-  function loadTweets() {
+  const loadTweets = () => {
     $.ajax({
       url: '/tweets',
       method: 'GET',
-      success: function(data) {
+      success: data => {
         renderTweets(data);
       }
     });
-  }
+  };
 
   // when tweet is submitted, issue error msgs if invalid character count
   // use ajax to POST /tweets data and reset compose box
+  // (used function over => to use 'this)
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
-    var tweetText = $('.new-tweet textarea').val();
+    const tweetText = $('.new-tweet textarea').val();
     if (tweetText.length === 0) {
       $('.error-msg').text('Cannot submit empty Tweet!');
       return;
@@ -73,19 +74,23 @@ $(function() {
       url: '/tweets',
       method: 'POST',
       data: $(this).serialize(),
-      success: function() {
+      success: () => {
         $('.new-tweet textarea').val('');
         $('.counter').text('140');
-        $('.error-msg').slideUp();
         loadTweets();
       }
     });
   });
 
+  // when textarea is selected, error msg becomes blank
+  $('.new-tweet textarea').on('focus', () => {
+    $('.error-msg').text('');
+  });
+
   // when compose button is clicked, slide compose box
   // and auto select textarea
-  $('#nav-bar button').on('click', function() {
-    $('.new-tweet').slideToggle(300, function() {
+  $('#nav-bar button').on('click', () => {
+    $('.new-tweet').slideToggle(300, () => {
       $('.new-tweet textarea').select();
     });
   });

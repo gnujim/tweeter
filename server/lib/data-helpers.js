@@ -4,7 +4,7 @@
 module.exports = function makeDataHelpers(db) {
   return {
     // saves tweet to database
-    saveTweet: function(newTweet, callback) {
+    saveTweet: (newTweet, callback) => {
       db.collection('tweets').insertOne(newTweet, err => {
         if (err) {
           return callback(err);
@@ -14,7 +14,7 @@ module.exports = function makeDataHelpers(db) {
     },
 
     // obtains tweets from database
-    getTweets: function(callback) {
+    getTweets: callback => {
       db
         .collection('tweets')
         .find()

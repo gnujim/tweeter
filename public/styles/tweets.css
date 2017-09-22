@@ -6,7 +6,7 @@
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(177, 174, 174);
   border-radius: 2%;
-  height: 180px;
+  height: auto;
   margin: 0 auto;
   margin-top: 10px;
   opacity: 0.7;
@@ -35,7 +35,7 @@
 .tweet header .user-name {
   color: rgb(36, 71, 81);
   float: left;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .tweet header .user-handle {
@@ -51,14 +51,13 @@
   color: rgb(36, 71, 81);
   line-height: 30px;
   margin: 13px;
+  overflow-wrap: break-word;
   width: 370px;
 }
 
 .tweet footer {
   border-top: 1px solid rgb(174, 174, 174);
-  bottom: 0;
   height: 30px;
-  position: absolute;
   width: 398px;
 }
 

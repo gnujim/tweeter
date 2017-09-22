@@ -1,6 +1,7 @@
 nav {
   background-color: #00a087;
   color: #e8fdff;
+  display: flex;
   height: 80px;
   left: 0;
   padding-right: 2em;
@@ -10,12 +11,11 @@ nav {
   top: 0;
   z-index: 10; }
   nav img {
-    float: left;
     height: 80px;
     padding-right: 5px;
     width: 80px; }
   nav .header {
-    float: left;
+    flex: 1;
     font-size: 2em;
     line-height: 80px;
     padding-left: 5px; }
@@ -24,7 +24,6 @@ nav {
     background-color: #caf0f3;
     border: 2px solid #7e7e7e;
     border-radius: 7%;
-    float: right;
     font-size: 18px;
     height: 55px;
     margin: 12px;
